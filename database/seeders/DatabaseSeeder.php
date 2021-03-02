@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
     //    \App\Models\LoaiTin::factory(10)->create();
        $this->call([
         TheLoaiSeeder::class,
-        LoaiTinTableSeeder::class
+        LoaiTinTableSeeder::class,
+        TinsTableSeeder::class
        ]);
         
         //$this->call=(LoaiTinTableSeeder::class);

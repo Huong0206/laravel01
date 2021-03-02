@@ -20,7 +20,7 @@ class LoaiTin extends Model
 
     }
     public function tin(){
-        return $this->hasMany(Tin::class, 'loaitin_id');
+        return $this->hasMany(Tins::class, 'loaitin_id');
         
     }
 }

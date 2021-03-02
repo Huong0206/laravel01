@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class TinTableSeender extends Seeder
+class TinsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,7 @@ class TinTableSeender extends Seeder
      */
     public function run()
     {
+        //
         \App\Models\Tins::factory(10)->create();
     }
 }

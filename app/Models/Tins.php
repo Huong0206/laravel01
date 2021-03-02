@@ -14,4 +14,8 @@ class Tins extends Model
         'loai_tin',
         'tom_tat',
     ];
+    public function loaiTins(){
+        return $this->belongsTo(LoaiTin::class);
+        
+    }
 }
