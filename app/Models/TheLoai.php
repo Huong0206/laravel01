@@ -15,4 +15,7 @@ class TheLoai extends Model
         'tieudekhongdau',
         'tomtat',
     ];
+    public function loaiTin(){
+        return $this->hasMany(LoaiTin::class, 'theloai_id');
+    }
 }

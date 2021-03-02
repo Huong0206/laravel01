@@ -5,17 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tin extends Model
+class Tins extends Model
 {
     use HasFactory;
-    protected $table ='tin';
+    protected $table ='tins';
     protected $fillable =[
         'thu_tu',
         'loai_tin',
-        'the_loai',
         'tom_tat',
     ];
-    public function theloai(){
-        return $this->belongsTo(Theloai::class);
-    }
 }

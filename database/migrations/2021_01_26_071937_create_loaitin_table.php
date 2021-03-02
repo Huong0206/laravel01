@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTinTable extends Migration
+class CreateLoaitinTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateTinTable extends Migration
      */
     public function up()
     {
-        Schema::create('tin', function (Blueprint $table) {
+        Schema::create('loaitin', function (Blueprint $table) {
             $table->id();
             $table->integer('thu_tu');
-            $table->unsignedBigInteger('loaitin_id');
-            $table->foreign('loaitin_id')->references('id')->on('loaitin');
+            $table->string('tieu_de');
+            $table->string('tieu_de_khong_dau');
             $table->string('tom_tat');
+            $table->unsignedBigInteger('theloai_id');
+            $table->foreign('theloai_id')->references('id')->on('theloai');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ class CreateTinTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tin');
+        Schema::dropIfExists('loaitin');
     }
 }
