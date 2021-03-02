@@ -15,10 +15,19 @@ class LoaiTin extends Model
         'tieu_de_khong_dau',
         'tom_tat',
     ];
+    public function theloai(){
+        return $this->belongsTo(Theloai::class);
+
+    }
+    public function tin(){
+        return $this->hasMany(Tin::class, 'loaitin_id');
+        
+    }
+}
 
 
 
     // protected $guarded =[
 
     // ]; loai tru
-}
+
