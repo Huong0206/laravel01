@@ -2,10 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Tin;
+use App\Models\Tins;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TinFactory extends Factory
+class TinsFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
@@ -22,9 +22,9 @@ class TinFactory extends Factory
     public function definition()
     {
         return [
+            //
             'thu_tu'=>$this->faker->randomDigit,
-            'tieu_de'=>$this->faker->text,
-            'tieu_de_khong_dau'=>$this->faker->slug,
+            'loaitin_id'=>1,
             'tom_tat'=>$this->faker->text
         ];
     }
