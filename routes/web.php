@@ -38,3 +38,6 @@ Route ::prefix('admin')->group(function(){
         return "Text group";
     });
 });
+Route::get('huong/{id}', function ($id){
+    return 'User'.$id;
+})->middleware('checkage');
