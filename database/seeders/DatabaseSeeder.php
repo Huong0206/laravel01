@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
-use App\Models\Category;
-use App\Models\LoaiTin;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -18,7 +16,8 @@ class DatabaseSeeder extends Seeder
        $this->call([
         TheLoaiSeeder::class,
         LoaiTinTableSeeder::class,
-        TinsTableSeeder::class
+        TinsTableSeeder::class,
+        CategoryTableSeeder::class
        ]);
         
         //$this->call=(LoaiTinTableSeeder::class);
